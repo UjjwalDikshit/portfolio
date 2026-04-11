@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujjwal Dikshit | Systems-minded Full Stack · NIT Srinagar</title>
+    <meta name="description" content="Hi—I’m Ujjwal Dikshit, B.Tech IT @ NIT Srinagar. Here’s my proof: full-stack MERN, Redis, 1000+ DSA, IIT BHU research, shipped projects with measured impact.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="ujjwal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body data-theme="dark">
+    <div class="ambient-bg" aria-hidden="true">
+        <div class="ambient-orb ambient-orb--1"></div>
+        <div class="ambient-orb ambient-orb--2"></div>
+        <div class="ambient-grid"></div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-content">
+            <nav class="nav-left" aria-label="Primary">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#proof" class="nav-link">Proof</a>
+                <a href="#learning" class="nav-link">Learning</a>
+                <a href="#focus" class="nav-link">Focus</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#case-studies" class="nav-link">Cases</a>
+                <a href="#systems" class="nav-link">Systems</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#coding-profiles" class="nav-link">Activity</a>
+                <a href="#dsa" class="nav-link">DSA</a>
+                <a href="#faq" class="nav-link">FAQ</a>
+                <a href="#resume" class="nav-link">Resume</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-right">
+                <button type="button" class="header-theme-btn" id="theme-toggle" title="Toggle dark / light mode" aria-label="Toggle dark and light theme">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <a href="https://github.com/UjjwalDikshit" target="_blank" rel="noopener noreferrer" class="nav-btn header-icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ujjwal-dikshit" target="_blank" rel="noopener noreferrer" class="nav-btn header-icon-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#ai-chatbot" class="nav-btn ai-chatbot-btn nav-desktop-only">Assistant</a>
+                <button type="button" class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Open menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <div class="mobile-overlay" id="mobile-overlay"></div>
+        <div class="mobile-nav" id="mobile-nav">
+            <div class="mobile-nav-header">
+                <h3>Menu</h3>
+                <button type="button" class="close-menu" id="close-menu" aria-label="Close menu">&times;</button>
+            </div>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#proof" class="mobile-nav-link">Proof</a>
+            <a href="#learning" class="mobile-nav-link">Learning</a>
+            <a href="#focus" class="mobile-nav-link">Focus</a>
+            <a href="#skills" class="mobile-nav-link">Skills</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#case-studies" class="mobile-nav-link">Case studies</a>
+            <a href="#systems" class="mobile-nav-link">Systems &amp; depth</a>
+            <a href="#experience" class="mobile-nav-link">Experience</a>
+            <a href="#coding-profiles" class="mobile-nav-link">Activity</a>
+            <a href="#dsa" class="mobile-nav-link">DSA</a>
+            <a href="#faq" class="mobile-nav-link">FAQ</a>
+            <a href="#resume" class="mobile-nav-link">Resume</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <a href="#ai-chatbot" class="mobile-nav-link">Assistant</a>
+        </div>
+    </header>
+
+    <main class="content-container">
+        <section class="profile-section hero-section" id="top" aria-label="Introduction">
+            <div class="profile-photo-wrapper">
+                <div class="profile-photo-inner">
+                    <img src="assets/profile-photo.png" alt="Ujjwal Dikshit" class="profile-photo" width="320" height="320" decoding="async">
+                </div>
+            </div>
+            <div class="intro-text card hero-card">
+                <p class="hero-role">B.Tech IT · NIT Srinagar (Batch 2027)</p>
+                <h1>Ujjwal Dikshit</h1>
+                <p class="hero-tagline">If you’re hiring interns or new grads for backend-heavy or full-stack roles: I ship MERN apps with <strong>Redis</strong>, <strong>JWT</strong>, and clear performance numbers (~30–35% gains I can walk through). I also keep my DSA sharp (LeetCode · GFG · Codeforces) and I’ve led at scale on campus—so I’m used to owning outcomes, not just tickets.</p>
+                <div class="hero-actions">
+                    <a href="resume.pdf" class="nav-btn submit-btn hero-btn" download>Download my resume (PDF)</a>
+                    <a href="https://github.com/UjjwalDikshit" target="_blank" rel="noopener noreferrer" class="nav-link hero-outline"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/ujjwal-dikshit" target="_blank" rel="noopener noreferrer" class="nav-link hero-outline"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="scrolling-content">
+            <section id="about" class="page-section">
+                <h2 class="section-heading"><span>About Me</span></h2>
+                <div class="card about-card">
+                    <p class="about-lead"><strong>What I want you to take away.</strong> I’m a B.Tech IT student at NIT Srinagar (CGPA <strong>8.22</strong>) who cares about <strong>systems that stay fast under load</strong>. I’ve implemented <strong>Redis</strong> caching, tightened APIs, and drawn service boundaries the way you’d expect in a real sprint—not just a demo. On my resume I cite roughly <strong>30–35%</strong> improvements on responsiveness and query/API time; I’m happy to explain exactly what I measured and how.</p>
+                    <p class="about-lead" style="margin-top: 1rem;"><strong>How I work with people.</strong> I’m Mess Representative for <strong>500+</strong> students, I’ve been on TEDx research (2024) and web (2025), I placed <strong>3rd</strong> in the Cursor Hackathon out of <strong>125+</strong> teams, and I mentor juniors. That means I’m used to clarity under pressure—whether it’s with admins, teammates, or hiring managers like you.</p>
+                    <ul class="stats-list">
+                        <li><strong>Where I’m based:</strong> East Champaran, Bihar (open to relocate for the right role).</li>
+                        <li><strong>Degree:</strong> NIT Srinagar — B.Tech IT, 2023–2027 (expected), CGPA <strong>8.22</strong> / 10.</li>
+                        <li><strong>Coursework I lean on:</strong> DSA, DBMS, OOP, OS, Software Engineering, Web Technologies.</li>
+                        <li><strong>Research:</strong> Winter 2025 — IIT BHU, genetic algorithms &amp; neural-network optimization (I can discuss methodology and documentation).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="proof" class="page-section proof-section">
+                <h2 class="section-heading"><span>Metrics &amp; proof</span></h2>
+                <p class="section-intro">I’m giving you <strong>fast signals</strong>—numbers I can defend in a screen or onsite. Everything here matches what I put on my resume.</p>
+                <div class="proof-grid">
+                    <div class="metric-card">
+                        <div class="metric-value">1000+</div>
+                        <div class="metric-label">DSA problems</div>
+                        <p class="metric-note">Across LeetCode, GeeksforGeeks, and Codeforces.</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">30–35%</div>
+                        <div class="metric-label">Performance wins</div>
+                        <p class="metric-note">Documented gains from Redis caching, indexing, and query/API optimization on real projects.</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">500+</div>
+                        <div class="metric-label">Students represented</div>
+                        <p class="metric-note">Mess Representative — grievances, admin coordination, accountability.</p>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-value">125+</div>
+                        <div class="metric-label">Hackathon scale</div>
+                        <p class="metric-note">Cursor Hackathon — 3rd place, shipped under deadline.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 style="font-size:1.05rem;margin-bottom:14px;">At a glance (what I’d repeat in our call)</h3>
+                    <div class="resume-strip">
+                        <div class="resume-strip-card">
+                            <h3>Stack snapshot</h3>
+                            <ul>
+                                <li>MERN · Redis · JWT</li>
+                                <li>React · Redux · Tailwind</li>
+                                <li>MongoDB · MySQL · indexing</li>
+                                <li>Judge0 · Cloudinary · Postman</li>
+                            </ul>
+                        </div>
+                        <div class="resume-strip-card">
+                            <h3>Flagship work</h3>
+                            <ul>
+                                <li>Full-stack coding platform</li>
+                                <li>EasFarm e-commerce + chat</li>
+                                <li>IIT BHU GA research</li>
+                            </ul>
+                        </div>
+                        <div class="resume-strip-card">
+                            <h3>Achievements</h3>
+                            <ul>
+                                <li>LeetCode rank 1739 (verify metric)</li>
+                                <li>Cursor Hackathon top 3</li>
+                                <li>TEDx · Mess Rep · Mentor</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="learning" class="page-section page-section--compact">
+                <h2 class="section-heading"><span>Currently learning</span></h2>
+                <p class="section-intro">I’m investing where it shows up in interviews: design under constraints, caching discipline, and auth trade-offs.</p>
+                <div class="focus-chips">
+                    <span class="focus-chip"><i class="fas fa-diagram-project" aria-hidden="true"></i> System design (URL shortener, chat, rate limiters)</span>
+                    <span class="focus-chip"><i class="fas fa-database" aria-hidden="true"></i> Advanced Redis patterns &amp; cache invalidation</span>
+                    <span class="focus-chip"><i class="fas fa-shield-halved" aria-hidden="true"></i> JWT vs session trade-offs in production-shaped apps</span>
+                </div>
+            </section>
+
+            <section id="focus" class="page-section page-section--compact">
+                <h2 class="section-heading"><span>Focus</span></h2>
+                <p class="section-intro">These are the themes I’ll keep steering our technical discussion toward—because they’re where I’ve actually shipped.</p>
+                <div class="focus-chips">
+                    <span class="focus-chip"><i class="fas fa-layer-group" aria-hidden="true"></i> Full-stack MERN + Redis</span>
+                    <span class="focus-chip"><i class="fas fa-bolt" aria-hidden="true"></i> Caching &amp; API latency</span>
+                    <span class="focus-chip"><i class="fas fa-network-wired" aria-hidden="true"></i> Microservices &amp; JWT</span>
+                    <span class="focus-chip"><i class="fas fa-code-branch" aria-hidden="true"></i> DSA patterns &amp; complexity</span>
+                    <span class="focus-chip"><i class="fas fa-users" aria-hidden="true"></i> Events &amp; campus programs</span>
+                </div>
+            </section>
+
+            <section id="skills" class="page-section">
+                <h2 class="section-heading"><span>Skills I’ll bring on day one</span></h2>
+                <div class="skills-grid">
+                    <div class="card skill-category">
+                        <h3 class="skill-category-title"><i class="fas fa-laptop-code" aria-hidden="true"></i> Frontend</h3>
+                        <ul class="skill-tags">
+                            <li>React.js · Redux</li>
+                            <li>Tailwind CSS · HTML5/CSS3</li>
+                        </ul>
+                    </div>
+                    <div class="card skill-category">
+                        <h3 class="skill-category-title"><i class="fas fa-server" aria-hidden="true"></i> Backend</h3>
+                        <ul class="skill-tags">
+                            <li>Node.js · Express.js</li>
+                            <li>REST · JWT · Redis</li>
+                            <li>Microservices</li>
+                        </ul>
+                    </div>
+                    <div class="card skill-category">
+                        <h3 class="skill-category-title"><i class="fas fa-database" aria-hidden="true"></i> Data</h3>
+                        <ul class="skill-tags">
+                            <li>MongoDB · MySQL</li>
+                            <li>Indexing · transactions · normalization</li>
+                        </ul>
+                    </div>
+                    <div class="card skill-category">
+                        <h3 class="skill-category-title"><i class="fas fa-brain" aria-hidden="true"></i> Core &amp; tools</h3>
+                        <ul class="skill-tags">
+                            <li>C · C++ · JavaScript (ES6+) · TS (familiar)</li>
+                            <li>DSA · OS · OOP · DBMS</li>
+                            <li>Git · GitHub · Postman · Cloudinary · VS Code</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="page-section">
+                <h2 class="section-heading"><span>Projects</span></h2>
+                <p class="section-intro">Here’s the short version—then I go <a href="#case-studies" class="project-link" style="display:inline;">deeper below</a> on architecture and trade-offs so you can assess how I think, not just what I list.</p>
+                <div class="project-list">
+                    <article class="card project-card" id="project-coding-platform">
+                        <header class="project-card-header">
+                            <h3>Full-Stack Coding Platform</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/UjjwalDikshit/LeetCode_Project" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
+                                <a href="#case-coding-platform" class="project-link"><i class="fas fa-book-open"></i> Case study</a>
+                            </div>
+                        </header>
+                        <p class="project-problem"><strong>What I solved:</strong> I needed a platform where users run code in many languages, stay authenticated safely, and admins can operate the product—without latency spiking when traffic repeats the same hot paths.</p>
+                        <p class="project-contrib"><strong>What I delivered:</strong> I used <strong>JWT + Redis</strong> for session semantics, cut perceived sluggishness by about <strong>30%</strong> through caching and API work, integrated <strong>Judge0</strong> for sandboxed runs, <strong>Cloudinary</strong> for media, and built admin <strong>CRUD</strong> so ops scale past “edit the DB by hand.”</p>
+                        <p class="project-stack"><strong>Stack:</strong> MERN, Redis, JWT, Cloudinary, Judge0 API</p>
+                        <div class="demo-placeholder"><i class="fas fa-video" aria-hidden="true"></i> I’ll add a 30–60s walkthrough here so you can evaluate UX without cloning the repo.</div>
+                    </article>
+                    <article class="card project-card" id="project-easfarm">
+                        <header class="project-card-header">
+                            <h3>EasFarm — Agricultural E-Commerce</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/UjjwalDikshit/EasFarm" class="project-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> Repository</a>
+                                <a href="#case-easfarm" class="project-link"><i class="fas fa-book-open"></i> Case study</a>
+                            </div>
+                        </header>
+                        <p class="project-problem"><strong>What I solved:</strong> Farmers and buyers needed real-time chat and credible content (blog), but I knew naive schemas and uncached APIs would break as threads and readers grew.</p>
+                        <p class="project-contrib"><strong>What I delivered:</strong> I built a <strong>microservice-style chat</strong> path, shipped an integrated <strong>blog</strong>, improved query latency by about <strong>35%</strong> via indexing and query shape, and shaved API time by about <strong>30%</strong> with <strong>Redis</strong> where it was safe.</p>
+                        <p class="project-stack"><strong>Stack:</strong> React, Node, Express, MongoDB, JWT, Redis, Cloudinary</p>
+                        <div class="demo-placeholder"><i class="fas fa-video" aria-hidden="true"></i> I’ll link a short demo so you can see chat + content flows the way a user would.</div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="case-studies" class="page-section">
+                <h2 class="section-heading"><span>Project case studies</span></h2>
+                <p class="section-intro">I wrote this the way I’d walk you through it in a technical interview: <strong>problem → why the obvious approach fails → what I did → trade-offs → impact</strong>.</p>
+                <div class="card">
+                    <div class="case-study-block" id="case-coding-platform">
+                        <h3>Full-Stack Coding Platform</h3>
+                        <p class="case-study-meta">Pinned on <a href="https://github.com/UjjwalDikshit" target="_blank" rel="noopener noreferrer">GitHub</a> · MERN + Redis + Judge0</p>
+                        <h4>Problem (how I’d explain it to you)</h4>
+                        <p>Every submission fans out to auth, persistence, and a sandbox (<strong>Judge0</strong>). If I naïvely hit the DB on every session check and every repeat read, and block the UI on every judge call, the system falls over when users pile in.</p>
+                        <h4>Why I didn’t stop at “CRUD + calls”</h4>
+                        <p>I needed cache-aware session validation, a hard boundary around execution so one slow sandbox doesn’t wreck the whole UX, and an admin surface so we’re not editing production data by hand.</p>
+                        <h4>What I implemented</h4>
+                        <ul>
+                            <li><strong>JWT + Redis</strong> for session semantics: short-lived access pattern with cache-friendly session lookups.</li>
+                            <li><strong>Redis caching</strong> on read-heavy API surfaces; invalidate on writes that matter.</li>
+                            <li><strong>Judge0</strong> as isolated execution plane; API layer handles orchestration, quotas, and error surfaces.</li>
+                            <li><strong>Cloudinary</strong> for media so app servers aren’t file bottlenecks.</li>
+                        </ul>
+                        <h4>Architecture (high level)</h4>
+                        <div class="diagram-box" role="img" aria-label="Architecture diagram">[ Browser (React) ]
+        |
+        v
+[ API Gateway / Express ]
+   |     |        \
+   |     |         \---> [ Judge0 API ]
+   |     |
+   |     \---> [ Redis: sessions + cache ]
+   \
+    \---> [ MongoDB: persistent data ]
+        |
+        v
+[ Cloudinary: media ]</div>
+                        <h4>Trade-offs</h4>
+                        <div class="tradeoff-grid">
+                            <div class="tradeoff-item"><strong>Redis vs pure DB sessions</strong> — Faster reads; must design TTL + invalidation to avoid stale auth or leaderboard glitches.</div>
+                            <div class="tradeoff-item"><strong>External Judge0</strong> — Offloads sandbox security; adds network latency and vendor coupling—mitigate with timeouts, retries, and user-visible progress.</div>
+                            <div class="tradeoff-item"><strong>MongoDB</strong> — Flexible submission docs; relational purists might model contests differently—chosen for iteration speed and document-shaped payloads.</div>
+                        </div>
+                        <h4>Impact (what you can ask me about)</h4>
+                        <p>I measured roughly <strong>30%</strong> better perceived responsiveness after caching and API work—the same figure I put on my resume. In a live conversation I’ll break down <em>what</em> I timed and <em>what</em> I controlled for.</p>
+                    </div>
+                    <div class="case-study-block" id="case-easfarm">
+                        <h3>EasFarm — Agricultural E-Commerce</h3>
+                        <p class="case-study-meta"><a href="https://github.com/UjjwalDikshit/EasFarm" target="_blank" rel="noopener noreferrer">EasFarm</a> on GitHub</p>
+                        <h4>Problem</h4>
+                        <p>I was building trust between farmers and buyers with <strong>chat</strong> and <strong>blog</strong> content. That means bursty writes <em>and</em> read spikes—exactly where an unindexed Mongo path or a chat service fused into the monolith hurts you.</p>
+                        <h4>Why I separated concerns</h4>
+                        <p>Message threads don’t scale on accidental full scans. Hot blog + chat APIs without caching amplify load. I wanted chat deploys and failures isolated from the core commerce API where possible.</p>
+                        <h4>What I implemented</h4>
+                        <ul>
+                            <li><strong>Microservice-style chat service</strong> to isolate real-time traffic and deployment.</li>
+                            <li><strong>Indexing + query restructuring</strong> for message and feed paths (~35% query latency reduction, resume).</li>
+                            <li><strong>Redis caching</strong> on API responses where safe (~30% API response improvement, resume).</li>
+                            <li><strong>Integrated blogging</strong> for engagement without bolting on a separate CMS prematurely.</li>
+                        </ul>
+                        <h4>Architecture sketch</h4>
+                        <div class="diagram-box" role="img" aria-label="EasFarm architecture">[ React SPA ]
+    |    \
+    |     \--> [ Blog API / content ]
+    v
+[ Core commerce API ]
+    |   \
+    |    \--> [ MongoDB + indexes ]
+    v
+[ Chat service (µsvc-style) ]
+    |
+    v
+[ Redis cache layer ]</div>
+                        <h4>Trade-offs</h4>
+                        <div class="tradeoff-grid">
+                            <div class="tradeoff-item"><strong>Microservice for chat</strong> — Independent scale and deploys; operational overhead (logging, tracing) increases—acceptable when chat is a product differentiator.</div>
+                            <div class="tradeoff-item"><strong>SQL vs NoSQL</strong> — MongoDB fits flexible message/blog documents; reporting-heavy analytics might later want a warehouse—documented as future evolution.</div>
+                            <div class="tradeoff-item"><strong>Cache consistency</strong> — Redis speeds reads; write-through vs cache-aside chosen per endpoint to limit stale UX on critical paths.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="systems" class="page-section systems-section">
+                <h2 class="section-heading"><span>Systems &amp; how I think</span></h2>
+                <p class="section-intro">If your loop includes a system-design or trade-off discussion, here’s how I communicate: <strong>constraints first</strong>, then <strong>data store choice</strong>, then <strong>scaling path</strong>, then <strong>the bottleneck I’d watch</strong>.</p>
+                <div class="card">
+                    <div class="depth-block" id="system-snippets">
+                        <h3>How I would design…</h3>
+                        <p><strong>URL shortener:</strong> Use a <strong>SQL</strong> or <strong>NoSQL</strong> store with a unique short-key index; redirect path is read-heavy → cache hot URLs in <strong>Redis</strong>; collision-resistant ID generation (base62). Bottleneck: read QPS → horizontal app servers + cache; DB for durability and analytics async.</p>
+                        <p><strong>Chat system:</strong> WebSockets or SSE for delivery; <strong>partition</strong> messages by room; store in document/row store with time-ordered index; presence in Redis. Bottleneck: fan-out on large rooms → consider channel services / streaming infra at scale.</p>
+                        <p><strong>Rate limiter:</strong> Token bucket or sliding window in <strong>Redis</strong> (atomic counters); I’d rate-limit per IP and per <strong>authenticated client id</strong> (never ship real secret keys to a browser—those stay on your server). Bottleneck: Redis if every request hits one shard; I’d watch clock skew in distributed checks.</p>
+                    </div>
+                    <div class="depth-block" id="problem-solving">
+                        <h3>How I solve problems (DSA &amp; backend)</h3>
+                        <ul>
+                            <li>I restate constraints and target complexity before I touch code.</li>
+                            <li>I sanity-check with brute force, then refactor using patterns (two pointers, sliding window, graphs, DP) when complexity demands it.</li>
+                            <li>I state time/space explicitly and only then harden edge cases.</li>
+                            <li>On systems questions I name the bottleneck (DB, network, CPU) and the smallest change that buys headroom—index, cache, or batching.</li>
+                        </ul>
+                    </div>
+                    <div class="depth-block" id="experiments">
+                        <h3>Experiments &amp; playground</h3>
+                        <div class="experiment-card">
+                            <p><strong>Redis on vs off</strong> — Measure p95 API latency on a read-heavy route with and without cache; document hit ratio and invalidation rules.</p>
+                        </div>
+                        <div class="experiment-card">
+                            <p><strong>REST vs GraphQL (hypothesis)</strong> — For mobile-heavy clients, GraphQL reduces over-fetching; for simple CRUD microservices, REST stays operationally lighter—pick per bounded context.</p>
+                        </div>
+                        <div class="experiment-card">
+                            <p><strong>JWT vs session cookies</strong> — JWT scales statelessly but complicates revocation; server sessions simplify kill-switch at cost of store—hybrid patterns for refresh tokens.</p>
+                        </div>
+                    </div>
+                    <div class="depth-block" id="tools-workflow">
+                        <h3>Tools &amp; workflow</h3>
+                        <div class="tools-grid">
+                            <div class="tool-pill"><strong>Git</strong> — feature branches, PR reviews, meaningful commits</div>
+                            <div class="tool-pill"><strong>Postman</strong> — collections for APIs; environment variables per stage</div>
+                            <div class="tool-pill"><strong>Debug</strong> — Node inspector, structured logs, reproduce-first mindset</div>
+                            <div class="tool-pill"><strong>VS Code</strong> — extensions for ESLint, GitLens, REST clients</div>
+                        </div>
+                    </div>
+                    <div class="depth-block" id="opensource">
+                        <h3>Open source &amp; contributions</h3>
+                        <p>I’m building a trail of <strong>PRs</strong>, <strong>issues</strong>, and <strong>meaningful forks</strong> on <a href="https://github.com/UjjwalDikshit" target="_blank" rel="noopener noreferrer">GitHub</a>—even doc and test fixes count, and I’ll link the ones I want you to read.</p>
+                    </div>
+                    <div class="depth-block" id="technical-writing">
+                        <h3>Technical writing (blog)</h3>
+                        <p>I’m drafting posts on JWT in practice, MongoDB query plans, and rate limiting—I'll host on <a href="https://hashnode.com/" target="_blank" rel="noopener noreferrer">Hashnode</a> or Dev.to and drop the links here so you can read how I explain, not only how I code.</p>
+                        <div class="blog-links">
+                            <a href="https://hashnode.com/" target="_blank" rel="noopener noreferrer"><i class="fas fa-pen-nib"></i> Publish on Hashnode (add your series URL)</a>
+                            <a href="https://dev.to/" target="_blank" rel="noopener noreferrer"><i class="fas fa-rss"></i> Mirror on Dev.to (optional)</a>
+                        </div>
+                    </div>
+                    <div class="depth-block" id="performance">
+                        <h3>Performance &amp; quality bar</h3>
+                        <p>I treat <strong>Lighthouse</strong>, Core Web Vitals, bundle size, and API p95 as part of “done.” I’ll replace the placeholders below with real numbers from this site and from my deployed apps as I lock them in.</p>
+                        <div class="perf-row">
+                            <span class="perf-badge">Lighthouse: run locally &amp; paste scores</span>
+                            <span class="perf-badge">Portfolio: optimize images + lazy-load charts</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="page-section">
+                <h2 class="section-heading"><span>Experience &amp; leadership</span></h2>
+                <p class="section-intro">Beyond code: where I’ve been accountable to people and deadlines—so you know I’ll show up the same way on your team.</p>
+                <ul class="timeline">
+                    <li class="card timeline-item">
+                        <span class="timeline-label">Research · Winter 2025</span>
+                        <h3>IIT (BHU), Varanasi — Research Intern</h3>
+                        <p>I worked on genetic algorithms—adaptive search and NN optimization—and I documented results the way a research team can actually use them.</p>
+                    </li>
+                    <li class="card timeline-item">
+                        <span class="timeline-label">Leadership · Current</span>
+                        <h3>Mess Representative — NIT Srinagar</h3>
+                        <p>I’m the elected point of contact for <strong>500+</strong> students—grievances, admin coordination, and follow-through.</p>
+                    </li>
+                    <li class="card timeline-item">
+                        <span class="timeline-label">Events</span>
+                        <h3>TEDx NIT Srinagar</h3>
+                        <p>I was on the 2024 research team and the 2025 web team—logistics, digital presence, and keeping participants informed.</p>
+                    </li>
+                    <li class="card timeline-item">
+                        <span class="timeline-label">March 2025</span>
+                        <h3>Cursor Hackathon — 3rd place</h3>
+                        <p><strong>125+</strong> teams; I shipped a prototype under a hard deadline with my team.</p>
+                    </li>
+                    <li class="card timeline-item">
+                        <span class="timeline-label">Mentorship</span>
+                        <h3>Peer mentor</h3>
+                        <p>I mentor juniors on programming and how to plan projects end-to-end.</p>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="coding-profiles" class="page-section">
+                <h2 class="section-heading"><span>Profiles &amp; activity</span></h2>
+                <p class="section-intro">For your due diligence: each platform is on its <strong>own row</strong> (1 → 2 → 3). Verified profile links:</p>
+                <ul class="section-intro" style="margin-top:-12px; list-style:disc; padding-left:1.25rem;">
+                    <li><a href="https://github.com/UjjwalDikshit" target="_blank" rel="noopener noreferrer">github.com/UjjwalDikshit</a></li>
+                    <li><a href="https://leetcode.com/u/Ujjwal_Dikshit/" target="_blank" rel="noopener noreferrer">leetcode.com/u/Ujjwal_Dikshit/</a></li>
+                    <li><a href="https://www.geeksforgeeks.org/profile/ujjwaldi152j?tab=activity" target="_blank" rel="noopener noreferrer">GeeksforGeeks profile (activity)</a></li>
+                    <li><a href="https://codeforces.com/profile/ujjwaldikshit" target="_blank" rel="noopener noreferrer">codeforces.com/profile/ujjwaldikshit</a></li>
+                </ul>
+                <div class="coding-grid">
+                    <article class="card coding-card">
+                        <div class="coding-card-head">
+                            <span class="activity-rank" aria-hidden="true">1</span>
+                            <span class="coding-icon coding-icon--github" aria-hidden="true"><i class="fab fa-github"></i></span>
+                            <div>
+                                <h3>GitHub</h3>
+                                <p class="coding-card-sub">Contribution graph · last year</p>
+                            </div>
+                        </div>
+                        <div class="github-chart-shell">
+                            <img id="github-contrib-chart" class="github-chart-img" src="https://ghchart.rshah.org/UjjwalDikshit" alt="GitHub contributions" width="722" height="112" loading="lazy" data-github-user="UjjwalDikshit">
+                        </div>
+                        <a href="https://github.com/UjjwalDikshit" target="_blank" rel="noopener noreferrer" class="coding-cta">Open GitHub <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="card coding-card">
+                        <div class="coding-card-head">
+                            <span class="activity-rank" aria-hidden="true">2</span>
+                            <span class="coding-icon coding-icon--leetcode" aria-hidden="true"><i class="fas fa-code"></i></span>
+                            <div>
+                                <h3>LeetCode</h3>
+                                <p class="coding-card-sub">Stats card + heatmap</p>
+                            </div>
+                        </div>
+                        <div class="leetcode-card-shell">
+                            <img id="leetcode-stats-card" class="leetcode-card-img" src="https://leetcard.jacoblin.cool/Ujjwal_Dikshit?theme=dark&extension=heatmap" alt="LeetCode statistics" width="500" height="220" loading="lazy" data-leetcode-user="Ujjwal_Dikshit">
+                        </div>
+                        <a href="https://leetcode.com/u/Ujjwal_Dikshit/" target="_blank" rel="noopener noreferrer" class="coding-cta">Open LeetCode <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </article>
+                    <article class="card coding-card">
+                        <div class="coding-card-head">
+                            <span class="activity-rank" aria-hidden="true">3</span>
+                            <span class="coding-icon coding-icon--gfg" aria-hidden="true"><i class="fas fa-terminal"></i></span>
+                            <div>
+                                <h3>GeeksforGeeks</h3>
+                                <p class="coding-card-sub">Profile &amp; activity</p>
+                            </div>
+                        </div>
+                        <div class="gfg-stats">
+                            <div class="gfg-stat-row">
+                                <span class="gfg-stat-label">Practice footprint</span>
+                                <strong class="gfg-stat-value">1000+ total</strong>
+                            </div>
+                            <div class="gfg-stat-row">
+                                <span class="gfg-stat-label">Platforms</span>
+                                <strong class="gfg-stat-value">LC + GFG + CF</strong>
+                            </div>
+                            <p class="gfg-hint">My live activity (solves, streaks) is on the GFG profile—I keep this copy aligned with what you’ll see there.</p>
+                        </div>
+                        <a href="https://www.geeksforgeeks.org/profile/ujjwaldi152j?tab=activity" target="_blank" rel="noopener noreferrer" class="coding-cta">Open GFG profile <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                    </article>
+                </div>
+                <p class="section-intro" style="margin-top:20px;">I also compete on Codeforces as <a href="https://codeforces.com/profile/ujjwaldikshit" class="project-link" target="_blank" rel="noopener noreferrer">ujjwaldikshit</a>—happy to walk through rating and problem mix if that’s part of your bar.</p>
+            </section>
+
+            <section id="dsa" class="page-section">
+                <h2 class="section-heading"><span>DSA &amp; achievements</span></h2>
+                <div class="card dsa-card">
+                    <p class="dsa-summary">I keep competitive programming in parallel with shipping—so I can reason about complexity the same week I’m wiring APIs.</p>
+                    <ul class="dsa-stats">
+                        <li><i class="fas fa-code" aria-hidden="true"></i> I’ve solved <strong>1000+</strong> problems across LeetCode, GFG, and Codeforces.</li>
+                        <li><i class="fas fa-chart-line" aria-hidden="true"></i> On my resume I cite LeetCode <strong>rank 1739</strong>—if you want the exact definition (contest vs global), I’ll match my wording to my public profile before we talk.</li>
+                        <li><i class="fas fa-trophy" aria-hidden="true"></i> I placed <strong>3rd</strong> in the Cursor Hackathon among <strong>125+</strong> teams.</li>
+                    </ul>
+                    <div class="dsa-platforms">
+                        <a href="https://leetcode.com/u/Ujjwal_Dikshit/" target="_blank" rel="noopener noreferrer" class="nav-link platform-link"><i class="fas fa-chart-line"></i> LeetCode</a>
+                        <a href="https://codeforces.com/profile/ujjwaldikshit" target="_blank" rel="noopener noreferrer" class="nav-link platform-link"><i class="fas fa-trophy"></i> Codeforces</a>
+                        <a href="https://www.geeksforgeeks.org/profile/ujjwaldi152j?tab=activity" target="_blank" rel="noopener noreferrer" class="nav-link platform-link"><i class="fas fa-terminal"></i> GFG</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="faq" class="page-section">
+                <h2 class="section-heading"><span>FAQ</span></h2>
+                <div class="card">
+                    <dl class="faq-list">
+                        <dt>Why should you interview me?</dt>
+                        <dd>Because I’ll give you <strong>concrete engineering</strong>—caching, indexing, API latency—with numbers, and <strong>ownership</strong> outside IDE (Mess Rep, hackathons, research writing). I want the conversation to be trade-offs, not buzzwords.</dd>
+                        <dt>What do I bring that’s harder to teach?</dt>
+                        <dd>I habitually write down <strong>before/after</strong> performance thinking, I whiteboard architectures cleanly, and I don’t treat DSA and product work as either/or.</dd>
+                        <dt>Where I’m strongest on day one?</dt>
+                        <dd>Backend performance instincts, Redis/JWT patterns, MERN delivery, and communicating clearly when the deadline is real.</dd>
+                    </dl>
+                    <div class="personal-card" style="margin-top:28px; padding-top:24px; border-top:1px solid var(--border-color);">
+                        <strong>Outside the editor (still relevant to you).</strong> I spend time on hackathons, contests, and campus tech events—my interests stay close to building and shipping, not random filler.
+                    </div>
+                </div>
+            </section>
+
+            <section id="resume" class="page-section">
+                <h2 class="section-heading"><span>Resume</span></h2>
+                <div class="card resume-card">
+                    <p>You’ll get the fastest read from my <strong>one-page PDF</strong>. The button below points to <code class="inline-code">resume.pdf</code> in this folder—rename the file to e.g. <code class="inline-code">Ujjwal_Dikshit_Resume.pdf</code> if you prefer, and update the link in the hero to match.</p>
+                    <a href="resume.pdf" class="nav-btn submit-btn hero-btn" download>Download my resume (PDF)</a>
+                    <p class="metric-note" style="margin-top:16px;"><strong>Security note for visitors:</strong> This site is static HTML/CSS/JS. I don’t embed API keys or private tokens here—anything secret belongs on a server you control, never in the browser. That’s intentional so anyone can open this portfolio safely.</p>
+                </div>
+            </section>
+
+            <section id="ai-chatbot" class="page-section">
+                <h2 class="section-heading"><span>Quick Q&amp;A (for you)</span></h2>
+                <div class="card ai-card">
+                    <div class="chat-controls">
+                        <button type="button" id="refresh-chat" class="control-btn" title="Refresh chat"><i class="fas fa-sync-alt"></i></button>
+                        <button type="button" id="clear-chat" class="control-btn clear-btn" title="Clear chat"><i class="fas fa-times"></i></button>
+                    </div>
+                    <p class="ai-intro">I’m not a live LLM—this is a short scripted helper so you can skim answers in my voice. Try <em>case study</em>, <em>redis</em>, <em>leetcode</em>, or <em>why hire</em>.</p>
+                    <div id="chat-container" class="chat-container" tabindex="0">
+                        <div class="chat-message bot-message">
+                            <strong>Assistant:</strong> Hi—ask me about my projects, IIT BHU work, or DSA. No API keys are used here; it’s all local text matching.
+                        </div>
+                    </div>
+                    <div class="chat-input-wrapper">
+                        <input type="text" id="user-query" placeholder="Ask something…" autocomplete="off">
+                        <button type="button" id="send-query" class="nav-btn ai-chatbot-btn">Ask</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="page-section">
+                <h2 class="section-heading"><span>Contact</span></h2>
+                <div class="contact-container">
+                    <div class="card contact-direct">
+                        <h3>Reach me</h3>
+                        <p class="contact-blurb">Thank you for reading this far—here’s how to reach me directly.</p>
+                        <div class="contact-links">
+                            <a href="mailto:ujjwaldikshit1@gmail.com" class="nav-link contact-row"><i class="fas fa-envelope"></i> ujjwaldikshit1@gmail.com</a>
+                            <a href="tel:+919622209640" class="nav-link contact-row"><i class="fas fa-phone"></i> +91-9622209640</a>
+                            <a href="https://www.linkedin.com/in/ujjwal-dikshit" target="_blank" rel="noopener noreferrer" class="nav-link contact-row"><i class="fab fa-linkedin"></i> linkedin.com/in/ujjwal-dikshit</a>
+                            <a href="https://github.com/UjjwalDikshit" target="_blank" rel="noopener noreferrer" class="nav-link contact-row"><i class="fab fa-github"></i> github.com/UjjwalDikshit</a>
+                            <span class="contact-row contact-location"><i class="fas fa-location-dot" aria-hidden="true"></i> East Champaran, Bihar</span>
+                        </div>
+                    </div>
+                    <form class="card contact-form" id="contact-form">
+                        <h3>Message</h3>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="message" placeholder="Your message" rows="6" required></textarea>
+                        <button type="submit" class="nav-btn submit-btn full-width">Send message (demo—wire to your backend)</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-left">
+            <p>&copy; 2026 Ujjwal Dikshit</p>
+        </div>
+        <div class="footer-socials">
+            <a href="https://github.com/UjjwalDikshit" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/ujjwal-dikshit" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="footer-right">
+            <p class="build-stamp">No secrets in the frontend · MERN · Redis · DSA</p>
+        </div>
+    </footer>
+
+    <script src="ujjwal.js"></script>
+</body>
+</html>
