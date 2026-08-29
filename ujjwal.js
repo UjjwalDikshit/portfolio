@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         skills:
             "I work across MERN, Redis, JWT, microservices, Redux, Tailwind, MongoDB, and MySQL—with strong DSA, OS, OOP, and DBMS fundamentals. Day-to-day I use Git, Postman, Cloudinary, and VS Code.",
         education:
-            "I’m pursuing B.Tech IT at NIT Srinagar (2023–2027 expected), CGPA 8.22. My coursework includes DSA, DBMS, OOP, OS, Software Engineering, and Web Technologies.",
+            "I’m pursuing B.Tech IT at NIT Srinagar (2023–2027 expected), CGPA 8.14. My coursework includes DSA, DBMS, OOP, OS, Software Engineering, and Web Technologies.",
         interests:
             "I care about scalable backends, caching, and real-time features, and I stay active on LeetCode, GFG, and Codeforces. On campus I lead as Mess Rep and through TEDx and hackathons.",
         contact:
@@ -289,7 +289,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 response = portfolioData.leadership;
             } else if (query.includes('who') || query.includes('about')) {
                 response =
-                    "I’m Ujjwal Dikshit—B.Tech IT at NIT Srinagar (CGPA 8.22). I build full-stack systems with Redis and JWT, practice DSA across LC/GFG/CF, and I lead on campus through Mess Rep work, TEDx, and hackathons.";
+                    "I’m Ujjwal Dikshit—B.Tech IT at NIT Srinagar (CGPA 8.14). I build full-stack systems with Redis and JWT, practice DSA across LC/GFG/CF, and I lead on campus through Mess Rep work, TEDx, and hackathons.";
             }
 
             addMessage(response, 'bot');
@@ -324,11 +324,162 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const contactForm = document.querySelector('.contact-form');
+    const formStatus = document.getElementById('form-status');
+    const contactSubmit = document.getElementById('contact-submit');
+    const cfg = window.PORTFOLIO_CONFIG || {};
+    const resumePath = cfg.resumePdfPath || 'assets/resume.pdf';
+
+    const syncResumeLinks = () => {
+        document.querySelectorAll('#resume-embed, #resume-download, .hero-btn[download]').forEach((el) => {
+            if (el.tagName === 'IFRAME' || el.tagName === 'A') {
+                if (el.id === 'resume-embed') {
+                    el.src = `${resumePath}#view=FitH`;
+                } else if (el.hasAttribute('href')) {
+                    el.setAttribute('href', resumePath);
+                }
+            }
+        });
+        const heroDownload = document.querySelector('.hero-actions a[download]');
+        if (heroDownload) heroDownload.setAttribute('href', resumePath);
+    };
+
+    syncResumeLinks();
+
+    const resumeEmbed = document.getElementById('resume-embed');
+    const resumeFallback = document.getElementById('resume-embed-fallback');
+    if (resumeEmbed) {
+        resumeEmbed.addEventListener('error', () => {
+            resumeEmbed.setAttribute('hidden', '');
+            if (resumeFallback) resumeFallback.hidden = false;
+        });
+    }
+
+    fetch(resumePath, { method: 'HEAD' })
+        .then((res) => {
+            if (!res.ok && resumeFallback) {
+                resumeFallback.hidden = false;
+                if (resumeEmbed) resumeEmbed.setAttribute('hidden', '');
+            }
+        })
+        .catch(() => {
+            if (resumeFallback) resumeFallback.hidden = false;
+            if (resumeEmbed) resumeEmbed.setAttribute('hidden', '');
+        });
+
+    const showFormStatus = (message, type = 'info') => {
+        if (!formStatus) return;
+        formStatus.hidden = false;
+        formStatus.textContent = message;
+        formStatus.className = `form-status form-status--${type}`;
+    };
+
+    const clearFormStatus = () => {
+        if (!formStatus) return;
+        formStatus.hidden = true;
+        formStatus.textContent = '';
+        formStatus.className = 'form-status';
+    };
+
+    const openMailtoFallback = (name, email, message) => {
+        const to = cfg.contact?.toEmail || 'ujjwaldikshit1@gmail.com';
+        const subject = encodeURIComponent(`${cfg.contact?.subjectPrefix || 'Portfolio message from'} ${name}`);
+        const body = encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${message}`);
+        window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    };
+
+    const submitContactForm = async (form) => {
+        const formData = new FormData(form);
+        const name = (formData.get('name') || '').toString().trim() || 'Visitor';
+        const email = (formData.get('email') || '').toString().trim();
+        const message = (formData.get('message') || '').toString().trim();
+        const honeypot = (formData.get('botcheck') || '').toString().trim();
+
+        if (honeypot) return;
+
+        if (!email || !message) {
+            showFormStatus('Please enter your email and message.', 'error');
+            return;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            showFormStatus('Please enter a valid email address.', 'error');
+            return;
+        }
+
+        const accessKey = (cfg.web3formsAccessKey || '').trim();
+
+        if (contactSubmit) contactSubmit.disabled = true;
+        clearFormStatus();
+        showFormStatus('Sending your message…', 'info');
+
+        if (!accessKey) {
+            openMailtoFallback(name, email, message);
+            showFormStatus(
+                'Email service is not configured—your email app should open as a backup.',
+                'info'
+            );
+            if (contactSubmit) contactSubmit.disabled = false;
+            return;
+        }
+
+        const subject = `${cfg.contact?.subjectPrefix || 'Portfolio message from'} ${name}`;
+        const payload = new FormData();
+        payload.append('access_key', accessKey);
+        payload.append('name', name);
+        payload.append('email', email);
+        payload.append('message', message);
+        payload.append('subject', subject);
+        payload.append('from_name', 'Ujjwal Dikshit Portfolio');
+        payload.append('replyto', email);
+        payload.append('botcheck', '');
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: payload,
+                headers: {
+                    Accept: 'application/json'
+                }
+            });
+
+            let result = {};
+            try {
+                result = await response.json();
+            } catch {
+                throw new Error('Unexpected response from the mail service.');
+            }
+
+            if (response.ok && result.success) {
+                showFormStatus('Message sent—thank you. I will reply to your email soon.', 'success');
+                form.reset();
+                return;
+            }
+
+            const apiMessage =
+                (typeof result.message === 'string' && result.message) ||
+                'Unable to send your message. Try again or email me directly.';
+
+            showFormStatus(apiMessage, 'error');
+        } catch (err) {
+            const isFileProtocol = window.location.protocol === 'file:';
+            const hint = isFileProtocol
+                ? ' Open this site with a local server (for example: npx serve) so the form can reach the mail API.'
+                : '';
+            showFormStatus(
+                `${err instanceof Error ? err.message : 'Network error.'}${hint} Opening your email app as a backup.`,
+                'error'
+            );
+            openMailtoFallback(name, email, message);
+        } finally {
+            if (contactSubmit) contactSubmit.disabled = false;
+        }
+    };
+
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert('Thank you for your message! I will get back to you soon.');
-            contactForm.reset();
+            submitContactForm(contactForm);
         });
     }
 });

@@ -1709,3 +1709,62 @@ h2, h3 {
     margin: 0;
     line-height: 1.5;
 }
+
+.resume-viewer-wrap {
+    width: 100%;
+    margin: 16px 0 20px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--bg-elevated);
+}
+
+.resume-embed {
+    display: block;
+    width: 100%;
+    height: min(72vh, 720px);
+    border: none;
+    background: #fff;
+}
+
+.form-honey {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.form-status {
+    font-family: var(--mono-font);
+    font-size: 0.85rem;
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    line-height: 1.5;
+}
+
+.form-status--success {
+    border-color: rgba(52, 211, 153, 0.45);
+    background: rgba(52, 211, 153, 0.1);
+}
+
+.form-status--error {
+    border-color: rgba(248, 113, 113, 0.45);
+    background: rgba(248, 113, 113, 0.08);
+}
+
+.form-status--info {
+    border-color: rgba(56, 189, 248, 0.35);
+    background: rgba(56, 189, 248, 0.08);
+}
+
+.contact-form {
+    position: relative;
+}
+
+.contact-form button[type='submit']:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}

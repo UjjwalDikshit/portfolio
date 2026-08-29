@@ -84,7 +84,7 @@
                 <h1>Ujjwal Dikshit</h1>
                 <p class="hero-tagline">If you’re hiring interns or new grads for backend-heavy or full-stack roles: I ship MERN apps with <strong>Redis</strong>, <strong>JWT</strong>, and clear performance numbers (~30–35% gains I can walk through). I also keep my DSA sharp (LeetCode · GFG · Codeforces) and I’ve led at scale on campus—so I’m used to owning outcomes, not just tickets.</p>
                 <div class="hero-actions">
-                    <a href="resume.pdf" class="nav-btn submit-btn hero-btn" download>Download my resume (PDF)</a>
+                    <a href="assets/resume.pdf" class="nav-btn submit-btn hero-btn" download="Ujjwal_Dikshit_Resume.pdf">Download my resume (PDF)</a>
                     <a href="https://github.com/UjjwalDikshit" target="_blank" rel="noopener noreferrer" class="nav-link hero-outline"><i class="fab fa-github"></i> GitHub</a>
                     <a href="https://www.linkedin.com/in/ujjwal-dikshit" target="_blank" rel="noopener noreferrer" class="nav-link hero-outline"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
                 </div>
@@ -95,11 +95,11 @@
             <section id="about" class="page-section">
                 <h2 class="section-heading"><span>About Me</span></h2>
                 <div class="card about-card">
-                    <p class="about-lead"><strong>What I want you to take away.</strong> I’m a B.Tech IT student at NIT Srinagar (CGPA <strong>8.22</strong>) who cares about <strong>systems that stay fast under load</strong>. I’ve implemented <strong>Redis</strong> caching, tightened APIs, and drawn service boundaries the way you’d expect in a real sprint—not just a demo. On my resume I cite roughly <strong>30–35%</strong> improvements on responsiveness and query/API time; I’m happy to explain exactly what I measured and how.</p>
+                    <p class="about-lead"><strong>What I want you to take away.</strong> I’m a B.Tech IT student at NIT Srinagar (CGPA <strong>8.14</strong>) who cares about <strong>systems that stay fast under load</strong>. I’ve implemented <strong>Redis</strong> caching, tightened APIs, and drawn service boundaries the way you’d expect in a real sprint—not just a demo. On my resume I cite roughly <strong>30–35%</strong> improvements on responsiveness and query/API time; I’m happy to explain exactly what I measured and how.</p>
                     <p class="about-lead" style="margin-top: 1rem;"><strong>How I work with people.</strong> I’m Mess Representative for <strong>500+</strong> students, I’ve been on TEDx research (2024) and web (2025), I placed <strong>3rd</strong> in the Cursor Hackathon out of <strong>125+</strong> teams, and I mentor juniors. That means I’m used to clarity under pressure—whether it’s with admins, teammates, or hiring managers like you.</p>
                     <ul class="stats-list">
                         <li><strong>Where I’m based:</strong> East Champaran, Bihar (open to relocate for the right role).</li>
-                        <li><strong>Degree:</strong> NIT Srinagar — B.Tech IT, 2023–2027 (expected), CGPA <strong>8.22</strong> / 10.</li>
+                        <li><strong>Degree:</strong> NIT Srinagar — B.Tech IT, 2023–2027 (expected), CGPA <strong>8.14</strong> / 10.</li>
                         <li><strong>Coursework I lean on:</strong> DSA, DBMS, OOP, OS, Software Engineering, Web Technologies.</li>
                         <li><strong>Research:</strong> Winter 2025 — IIT BHU, genetic algorithms &amp; neural-network optimization (I can discuss methodology and documentation).</li>
                     </ul>
@@ -528,9 +528,13 @@
             <section id="resume" class="page-section">
                 <h2 class="section-heading"><span>Resume</span></h2>
                 <div class="card resume-card">
-                    <p>You’ll get the fastest read from my <strong>one-page PDF</strong>. The button below points to <code class="inline-code">resume.pdf</code> in this folder—rename the file to e.g. <code class="inline-code">Ujjwal_Dikshit_Resume.pdf</code> if you prefer, and update the link in the hero to match.</p>
-                    <a href="resume.pdf" class="nav-btn submit-btn hero-btn" download>Download my resume (PDF)</a>
-                    <p class="metric-note" style="margin-top:16px;"><strong>Security note for visitors:</strong> This site is static HTML/CSS/JS. I don’t embed API keys or private tokens here—anything secret belongs on a server you control, never in the browser. That’s intentional so anyone can open this portfolio safely.</p>
+                    <p>Below is my <strong>one-page PDF</strong> (CGPA <strong>8.14</strong>). You can read it here or download it for your ATS pipeline.</p>
+                    <div class="resume-viewer-wrap">
+                        <iframe id="resume-embed" class="resume-embed" title="Ujjwal Dikshit — resume PDF" src="assets/resume.pdf#view=FitH"></iframe>
+                        <p id="resume-embed-fallback" class="embed-fallback" hidden>PDF preview did not load. Use the download button—make sure <code class="inline-code">assets/resume.pdf</code> exists in the project folder.</p>
+                    </div>
+                    <a href="assets/resume.pdf" id="resume-download" class="nav-btn submit-btn hero-btn" download="Ujjwal_Dikshit_Resume.pdf">Download my resume (PDF)</a>
+                    <p class="metric-note" style="margin-top:16px;">To update the file: replace <code class="inline-code">assets/resume.pdf</code> on disk (same path as in <code class="inline-code">ujjwal.config.js</code>).</p>
                 </div>
             </section>
 
@@ -568,11 +572,15 @@
                             <span class="contact-row contact-location"><i class="fas fa-location-dot" aria-hidden="true"></i> East Champaran, Bihar</span>
                         </div>
                     </div>
-                    <form class="card contact-form" id="contact-form">
-                        <h3>Message</h3>
-                        <input type="email" name="email" placeholder="Your email" required>
-                        <textarea name="message" placeholder="Your message" rows="6" required></textarea>
-                        <button type="submit" class="nav-btn submit-btn full-width">Send message (demo—wire to your backend)</button>
+                    <form class="card contact-form" id="contact-form" novalidate>
+                        <h3>Message me</h3>
+                        <p class="contact-blurb">Fill this out and it goes straight to <strong>ujjwaldikshit1@gmail.com</strong>. I’ll reply to the email you enter.</p>
+                        <div id="form-status" class="form-status" role="status" aria-live="polite" hidden></div>
+                        <input type="text" name="name" placeholder="Your name" autocomplete="name" required maxlength="120">
+                        <input type="email" name="email" placeholder="Your email" autocomplete="email" required maxlength="254">
+                        <textarea name="message" placeholder="Your message" rows="6" required maxlength="5000"></textarea>
+                        <input type="text" name="botcheck" class="form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <button type="submit" class="nav-btn submit-btn full-width" id="contact-submit">Send message</button>
                     </form>
                 </div>
             </section>
@@ -592,6 +600,7 @@
         </div>
     </footer>
 
+    <script src="ujjwal.config.js"></script>
     <script src="ujjwal.js"></script>
 </body>
 </html>
